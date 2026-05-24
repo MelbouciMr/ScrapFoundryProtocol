@@ -1,0 +1,164 @@
+[
+  {
+    "type": "constructor",
+    "inputs": [
+      { "name": "_token",    "type": "address" },
+      { "name": "_treasury", "type": "address" }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "name": "createBounty",
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "inputs": [
+      { "name": "amount",     "type": "uint256" },
+      { "name": "repoOwner", "type": "string"  },
+      { "name": "repoName",  "type": "string"  },
+      { "name": "issueId",   "type": "string"  },
+      { "name": "title",     "type": "string"  }
+    ],
+    "outputs": [{ "name": "bountyId", "type": "uint256" }]
+  },
+  {
+    "name": "claimBounty",
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "inputs": [
+      { "name": "bountyId",  "type": "uint256" },
+      { "name": "agentDid", "type": "string"  }
+    ],
+    "outputs": []
+  },
+  {
+    "name": "submitBounty",
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "inputs": [
+      { "name": "bountyId", "type": "uint256" },
+      { "name": "prId",     "type": "string"  }
+    ],
+    "outputs": []
+  },
+  {
+    "name": "approveBounty",
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "inputs": [{ "name": "bountyId", "type": "uint256" }],
+    "outputs": []
+  },
+  {
+    "name": "cancelBounty",
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "inputs": [{ "name": "bountyId", "type": "uint256" }],
+    "outputs": []
+  },
+  {
+    "name": "disputeBounty",
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "inputs": [{ "name": "bountyId", "type": "uint256" }],
+    "outputs": []
+  },
+  {
+    "name": "getBountyCore",
+    "type": "function",
+    "stateMutability": "view",
+    "inputs": [{ "name": "bountyId", "type": "uint256" }],
+    "outputs": [
+      { "name": "creator",   "type": "address" },
+      { "name": "amount",    "type": "uint256" },
+      { "name": "title",     "type": "string"  },
+      { "name": "status",    "type": "uint8"   },
+      { "name": "createdAt", "type": "uint256" },
+      { "name": "deadline",  "type": "uint256" }
+    ]
+  },
+  {
+    "name": "getBountyClaim",
+    "type": "function",
+    "stateMutability": "view",
+    "inputs": [{ "name": "bountyId", "type": "uint256" }],
+    "outputs": [
+      { "name": "agentDid",  "type": "string"  },
+      { "name": "agent",     "type": "address" },
+      { "name": "prId",      "type": "string"  },
+      { "name": "repoOwner", "type": "string"  },
+      { "name": "repoName",  "type": "string"  },
+      { "name": "issueId",   "type": "string"  }
+    ]
+  },
+  {
+    "name": "getProtocolStats",
+    "type": "function",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      { "name": "total",      "type": "uint256" },
+      { "name": "totalPaid",  "type": "uint256" },
+      { "name": "totalFees",  "type": "uint256" }
+    ]
+  },
+  {
+    "name": "nextBountyId",
+    "type": "function",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [{ "name": "", "type": "uint256" }]
+  },
+  {
+    "name": "BountyCreated",
+    "type": "event",
+    "inputs": [
+      { "name": "bountyId",  "type": "uint256", "indexed": true  },
+      { "name": "creator",   "type": "address", "indexed": true  },
+      { "name": "amount",    "type": "uint256", "indexed": false },
+      { "name": "repoOwner", "type": "string",  "indexed": false },
+      { "name": "repoName",  "type": "string",  "indexed": false },
+      { "name": "issueId",   "type": "string",  "indexed": false },
+      { "name": "title",     "type": "string",  "indexed": false }
+    ]
+  },
+  {
+    "name": "BountyClaimed",
+    "type": "event",
+    "inputs": [
+      { "name": "bountyId", "type": "uint256", "indexed": true  },
+      { "name": "agent",    "type": "address", "indexed": true  },
+      { "name": "agentDid", "type": "string",  "indexed": false }
+    ]
+  },
+  {
+    "name": "BountySubmitted",
+    "type": "event",
+    "inputs": [
+      { "name": "bountyId", "type": "uint256", "indexed": true  },
+      { "name": "agent",    "type": "address", "indexed": true  },
+      { "name": "prId",     "type": "string",  "indexed": false }
+    ]
+  },
+  {
+    "name": "BountyCompleted",
+    "type": "event",
+    "inputs": [
+      { "name": "bountyId", "type": "uint256", "indexed": true  },
+      { "name": "agent",    "type": "address", "indexed": true  },
+      { "name": "amount",   "type": "uint256", "indexed": false }
+    ]
+  },
+  {
+    "name": "BountyCancelled",
+    "type": "event",
+    "inputs": [
+      { "name": "bountyId", "type": "uint256", "indexed": true }
+    ]
+  },
+  {
+    "name": "BountyDisputed",
+    "type": "event",
+    "inputs": [
+      { "name": "bountyId", "type": "uint256", "indexed": true }
+    ]
+  }
+]
