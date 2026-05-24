@@ -1,0 +1,411 @@
+.section {
+  position: relative;
+  padding: 120px 0;
+  background: linear-gradient(180deg, #0a0a0a 0%, #0f0f0f 100%);
+  border-top: 1px solid rgba(255, 107, 26, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: #888;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.title {
+  font-family: 'Tektur', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.accent {
+  color: #ff6b1a;
+  text-shadow: 0 0 30px rgba(255, 107, 26, 0.5);
+}
+
+.description {
+  font-size: 18px;
+  color: #888;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Workflow */
+.workflow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.workflowStep {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.stepIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 107, 26, 0.1);
+  border: 1px solid rgba(255, 107, 26, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff6b1a;
+}
+
+.stepContent h3 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.stepContent p {
+  font-size: 13px;
+  color: #666;
+}
+
+.workflowArrow {
+  color: rgba(255, 107, 26, 0.3);
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .workflowArrow {
+    display: none;
+  }
+  .workflow {
+    flex-direction: column;
+  }
+}
+
+/* Bounties */
+.bounties {
+  background: rgba(15, 15, 15, 0.8);
+  border: 1px solid #1e1e1e;
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 60px;
+}
+
+.bountiesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.bountiesHeader h3 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+
+.viewAll {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: #ff6b1a;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.viewAll:hover {
+  opacity: 0.7;
+}
+
+.bountyList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.bountyCard {
+  background: #0a0a0a;
+  border: 1px solid #1e1e1e;
+  border-radius: 8px;
+  padding: 20px;
+  transition: border-color 0.2s;
+}
+
+.bountyCard:hover {
+  border-color: rgba(255, 107, 26, 0.3);
+}
+
+.bountyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.bountyId {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: #666;
+  letter-spacing: 0.1em;
+}
+
+.bountyDifficulty {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.bountyDifficulty.easy {
+  background: rgba(57, 255, 20, 0.1);
+  color: #39ff14;
+  border: 1px solid rgba(57, 255, 20, 0.3);
+}
+
+.bountyDifficulty.medium {
+  background: rgba(255, 183, 0, 0.1);
+  color: #ffb700;
+  border: 1px solid rgba(255, 183, 0, 0.3);
+}
+
+.bountyDifficulty.hard {
+  background: rgba(255, 32, 32, 0.1);
+  color: #ff2020;
+  border: 1px solid rgba(255, 32, 32, 0.3);
+}
+
+.bountyTitle {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.bountyFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bountyReward {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  color: #ff6b1a;
+}
+
+.bountyStatus {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.1em;
+}
+
+.bountyStatus.open {
+  background: rgba(57, 255, 20, 0.1);
+  color: #39ff14;
+  border: 1px solid rgba(57, 255, 20, 0.3);
+}
+
+.bountyStatus.claimed {
+  background: rgba(68, 136, 255, 0.1);
+  color: #4488ff;
+  border: 1px solid rgba(68, 136, 255, 0.3);
+}
+
+/* Integration */
+.integration {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 32px;
+  background: rgba(255, 107, 26, 0.03);
+  border: 1px solid rgba(255, 107, 26, 0.1);
+  border-radius: 12px;
+  margin-bottom: 60px;
+}
+
+.integrationIcon {
+  color: #ff6b1a;
+  flex-shrink: 0;
+}
+
+.integrationContent h3 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.integrationContent p {
+  font-size: 14px;
+  color: #888;
+  line-height: 1.7;
+}
+
+.integrationContent code {
+  font-family: 'IBM Plex Mono', monospace;
+  background: rgba(255, 107, 26, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #ff6b1a;
+  font-size: 13px;
+}
+
+/* Tiers */
+.tiers {
+  margin-bottom: 60px;
+}
+
+.tiers h3 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.tierGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.tier {
+  background: rgba(15, 15, 15, 0.8);
+  border: 1px solid #1e1e1e;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.tier:hover {
+  border-color: rgba(255, 107, 26, 0.3);
+}
+
+.tierBadge {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  padding: 6px 16px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.tierBadge.easy {
+  background: rgba(57, 255, 20, 0.1);
+  color: #39ff14;
+  border: 1px solid rgba(57, 255, 20, 0.3);
+}
+
+.tierBadge.medium {
+  background: rgba(255, 183, 0, 0.1);
+  color: #ffb700;
+  border: 1px solid rgba(255, 183, 0, 0.3);
+}
+
+.tierBadge.hard {
+  background: rgba(255, 107, 26, 0.1);
+  color: #ff6b1a;
+  border: 1px solid rgba(255, 107, 26, 0.3);
+}
+
+.tierReward {
+  font-family: 'Tektur', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff6b1a;
+  margin-bottom: 16px;
+}
+
+.tierRequirements {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tierRequirements div {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: #666;
+}
+
+/* CTA */
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  padding: 14px 32px;
+  background: #ff6b1a;
+  color: #0a0a0a;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.ctaButton:hover {
+  background: #ff8c42;
+  transform: translateY(-2px);
+}
+
+.ctaSecondary {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  padding: 14px 32px;
+  background: transparent;
+  color: #ff6b1a;
+  border: 1px solid rgba(255, 107, 26, 0.3);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.ctaSecondary:hover {
+  background: rgba(255, 107, 26, 0.1);
+}
